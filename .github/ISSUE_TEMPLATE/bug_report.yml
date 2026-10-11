@@ -1,0 +1,75 @@
+name: Bug report
+description: Something in a Matelot cell, the CLI, the runner or the chart does not behave as documented.
+title: "[Bug] "
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Security vulnerabilities must not be reported here** — use the private channels in
+        [SECURITY.md](https://github.com/matelot-io/matelot/blob/main/SECURITY.md). Questions belong in
+        [Discussions](https://github.com/matelot-io/matelot/discussions).
+  - type: input
+    id: cell-version
+    attributes:
+      label: Cell version
+      description: The web app footer ("API x.y.z"), or the chart's appVersion (`helm list -n <namespace>`).
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: cli-version
+    attributes:
+      label: CLI version
+      description: "`matelot --version` (leave empty if the CLI is not involved)."
+      placeholder: "2.19.2"
+  - type: input
+    id: chart-version
+    attributes:
+      label: Chart version
+      description: "`helm list -n <namespace>` → CHART column."
+      placeholder: "secops-cell-0.1.0"
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options: [Web app, API, Worker / pipelines, Managed runner, Self-hosted runner, CLI, Helm chart / install, Backup / restore, Registry integration, Git host integration, Notifications, MCP server, Documentation, Other]
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Kubernetes
+      description: Distribution and version, ingress controller, storage class.
+      placeholder: "EKS 1.30, ingress-nginx, gp3"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what happened instead. Redact secrets, tokens and hostnames you do not want public.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: "`kubectl -n <namespace> logs deploy/<release>-api` (or worker / runner), the CLI output with `--verbose`. Redact secrets."
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and discussions.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

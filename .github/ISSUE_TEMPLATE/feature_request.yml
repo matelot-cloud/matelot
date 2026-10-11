@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose a capability, an integration or a change in behaviour.
+title: "[Feature] "
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do that Matelot does not let you do, or makes harder than it should be?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would it work, in the UI, the CLI or the API? Which integration or standard is involved?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Inventory / SBOM, Vulnerabilities / risk, Policies / gates, Pipelines / runners, Remediation / issue trackers, Compliance / CRA evidence, Integrations (Git, registries, cloud, chat), Identity / RBAC, CLI / MCP / API, Operations (chart, backups, upgrades), Documentation, Other]
+  - type: input
+    id: tier
+    attributes:
+      label: Your tier (optional)
+      placeholder: "Free / Premium / Ultimate / evaluating"

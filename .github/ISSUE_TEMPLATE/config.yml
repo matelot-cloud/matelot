@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or installation help
+    url: https://github.com/matelot-io/matelot/discussions
+    about: Ask in Discussions — questions opened as issues are converted.
+  - name: Security vulnerability
+    url: https://github.com/matelot-io/matelot/security/advisories/new
+    about: Report privately through GitHub security advisories (or security@matelot.io). Never as a public issue.
+  - name: Documentation and install guide
+    url: https://matelot-io.github.io/website/docs/latest/
+    about: Check the docs first — the install guide covers requirements, values, backups and upgrades.
+  - name: Commercial questions
+    url: mailto:sales@matelot.io
+    about: Pricing, tiers, invoices, MSSP and reseller agreements.
