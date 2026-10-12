@@ -5,11 +5,11 @@
 <p align="center"><strong>Product security, DevSecOps and CRA compliance — self-hosted in your Kubernetes cluster.</strong></p>
 
 <p align="center">
-  <a href="https://matelot-io.github.io/website/">Website</a> ·
-  <a href="https://matelot-io.github.io/website/docs/latest/">Documentation</a> ·
-  <a href="https://matelot-io.github.io/website/docs/latest/install.html">Install guide</a> ·
-  <a href="https://github.com/matelot-io/helm-charts">Helm chart</a> ·
-  <a href="https://github.com/matelot-io/matelot/releases">Releases</a> ·
+  <a href="https://matelot-cloud.github.io/website/">Website</a> ·
+  <a href="https://matelot-cloud.github.io/website/docs/latest/">Documentation</a> ·
+  <a href="https://matelot-cloud.github.io/website/docs/latest/install.html">Install guide</a> ·
+  <a href="https://github.com/matelot-cloud/helm-charts">Helm chart</a> ·
+  <a href="https://github.com/matelot-cloud/matelot/releases">Releases</a> ·
   <a href="SECURITY.md">Security policy</a>
 </p>
 
@@ -44,23 +44,23 @@ _Screenshots will be added with the first public release._
 ## Install
 
 ```bash
-helm install acme oci://ghcr.io/matelot-io/charts/secops-cell --version <release> \
+helm install acme oci://ghcr.io/matelot-cloud/charts/secops-cell --version <release> \
   --namespace tenant-acme --create-namespace -f values.yaml
 ```
 
-The [install guide](https://matelot-io.github.io/website/docs/latest/install.html) covers requirements, the values
+The [install guide](https://matelot-cloud.github.io/website/docs/latest/install.html) covers requirements, the values
 that matter (tenant, ingress and TLS, database, backups), the first administrator, upgrades and removal. Images
-(`ghcr.io/matelot-io/{api,web,worker,runner}`) and the chart are published on GitHub Packages, signed with cosign
-(keyless, GitHub OIDC) and carry SBOM attestations; every [release](https://github.com/matelot-io/matelot/releases)
+(`ghcr.io/matelot-cloud/{api,web,worker,runner}`) and the chart are published on GitHub Packages, signed with cosign
+(keyless, GitHub OIDC) and carry SBOM attestations; every [release](https://github.com/matelot-cloud/matelot/releases)
 lists the digests.
 
 ## This repository
 
 Matelot is closed source; this repository holds no code. It is the public home for:
 
-- **[Issues](https://github.com/matelot-io/matelot/issues)** — bug reports and feature requests (templates provided). Security vulnerabilities go through the [security policy](SECURITY.md), never through a public issue.
-- **[Discussions](https://github.com/matelot-io/matelot/discussions)** — questions, installation help, ideas.
-- **[Releases](https://github.com/matelot-io/matelot/releases)** — release notes with image and chart digests and SBOMs.
+- **[Issues](https://github.com/matelot-cloud/matelot/issues)** — bug reports and feature requests (templates provided). Security vulnerabilities go through the [security policy](SECURITY.md), never through a public issue.
+- **[Discussions](https://github.com/matelot-cloud/matelot/discussions)** — questions, installation help, ideas.
+- **[Releases](https://github.com/matelot-cloud/matelot/releases)** — release notes with image and chart digests and SBOMs.
 - [CHANGELOG.md](CHANGELOG.md), [SUPPORT.md](SUPPORT.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [LICENSE](LICENSE) (customer EULA).
 
 Pull requests are not accepted here (there is nothing to change); see the [pull request template](.github/PULL_REQUEST_TEMPLATE.md).

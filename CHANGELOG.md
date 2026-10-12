@@ -1,11 +1,11 @@
 # Changelog
 
-Release notes with image and chart digests are published at https://github.com/matelot-io/matelot/releases.
+Release notes with image and chart digests are published at https://github.com/matelot-cloud/matelot/releases.
 This file summarises each release line; the detailed per-change log is maintained internally.
 
 ## v0.1.0 — first self-hosted release
 
-The first release a customer can install from the public chart: `oci://ghcr.io/matelot-io/charts/secops-cell`.
+The first release a customer can install from the public chart: `oci://ghcr.io/matelot-cloud/charts/secops-cell`.
 
 - **One cell per organization** from one Helm chart: API, worker, web app, managed runners, built-in container
   registry, Postgres, Redis, Keycloak; generated secrets that survive upgrades; upgrades roll only the application pods.

@@ -7,8 +7,8 @@ body:
     attributes:
       value: |
         Thanks for the report. **Security vulnerabilities must not be reported here** — use the private channels in
-        [SECURITY.md](https://github.com/matelot-io/matelot/blob/main/SECURITY.md). Questions belong in
-        [Discussions](https://github.com/matelot-io/matelot/discussions).
+        [SECURITY.md](https://github.com/matelot-cloud/matelot/blob/main/SECURITY.md). Questions belong in
+        [Discussions](https://github.com/matelot-cloud/matelot/discussions).
   - type: input
     id: cell-version
     attributes:

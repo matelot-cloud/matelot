@@ -8,7 +8,7 @@ We take vulnerability reports seriously and appreciate the time it takes to prep
 
 Report it through one of these private channels:
 
-1. **GitHub private vulnerability reporting** — [Report a vulnerability](https://github.com/matelot-io/matelot/security/advisories/new)
+1. **GitHub private vulnerability reporting** — [Report a vulnerability](https://github.com/matelot-cloud/matelot/security/advisories/new)
    on this repository (preferred: it keeps the whole exchange in one place and lets us credit you in the advisory).
 2. **E-mail** — security@matelot.io. If you want to encrypt, ask for our PGP key in a first plain message.
 
@@ -20,19 +20,19 @@ CLI version, chart version), steps to reproduce, and the impact as you understan
 - Acknowledgement within **2 business days**.
 - An assessment and a plan within **7 days**; we keep you informed while we work on a fix.
 - A fix in a release, with a GitHub security advisory and a CVE where appropriate. Advisories name the fixed
-  version; the [release notes](https://github.com/matelot-io/matelot/releases) carry the image digests.
+  version; the [release notes](https://github.com/matelot-cloud/matelot/releases) carry the image digests.
 - Credit in the advisory, if you want it.
 
 ## Scope
 
-Matelot's images (`ghcr.io/matelot-io/*`), the Helm chart, the `matelot` CLI, the runner agent and the public
+Matelot's images (`ghcr.io/matelot-cloud/*`), the Helm chart, the `matelot` CLI, the runner agent and the public
 website. Vulnerabilities in third-party components are in scope when Matelot's use of them is exploitable; we track
 our own dependencies with the SBOMs we publish for every release.
 
 ## Supported versions
 
 Security fixes go into the latest release line. Keep your cell on the latest release (`helm upgrade`, see the
-[install guide](https://matelot-io.github.io/website/docs/latest/install.html#7-upgrades)).
+[install guide](https://matelot-cloud.github.io/website/docs/latest/install.html#7-upgrades)).
 
 ## Verifying what you run
 
