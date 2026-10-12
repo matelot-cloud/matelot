@@ -6,6 +6,7 @@ What you can do instead:
 - a bug → https://github.com/matelot-cloud/matelot/issues/new?template=bug_report.yml
 - a feature → https://github.com/matelot-cloud/matelot/issues/new?template=feature_request.yml
 - a question → https://github.com/matelot-cloud/matelot/discussions
+- the `docker/` folder is written by the release pipeline: a fix there goes through an issue, not a pull request.
 - a correction to the documentation or the website → an issue or a discussion; the sources are private and the
   public copies are overwritten by the release pipeline, so a pull request against them would be lost.
 - a security vulnerability → SECURITY.md (private reporting), never a pull request or a public issue.

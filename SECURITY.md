@@ -32,7 +32,7 @@ our own dependencies with the SBOMs we publish for every release.
 ## Supported versions
 
 Security fixes go into the latest release line. Keep your cell on the latest release (`helm upgrade`, see the
-[install guide](https://matelot-cloud.github.io/website/docs/latest/install.html#7-upgrades)).
+[install guide](https://matelot-cloud.github.io/website/docs/latest/install.html#a5-upgrades-and-rollback)).
 
 ## Verifying what you run
 

@@ -43,24 +43,40 @@ _Screenshots will be added with the first public release._
 
 ## Install
 
+**Docker Compose — five minutes on one host** (evaluation and small teams):
+
+```bash
+git clone https://github.com/matelot-cloud/matelot.git && cd matelot/docker
+cp .env.example .env            # MATELOT_DOMAIN (keep localhost to try it), MATELOT_ADMIN_EMAIL
+docker compose up -d
+docker compose logs -f welcome  # prints the URL and the administrator login
+```
+
+Every secret is generated on first start; with a real domain Caddy obtains HTTPS certificates automatically.
+`docker/` is written by the release pipeline (compose file, `.env.example` pinned to the release, backup/restore
+scripts, smoke test).
+
+**Kubernetes (Helm) — production:**
+
 ```bash
 helm install acme oci://ghcr.io/matelot-cloud/charts/secops-cell --version <release> \
   --namespace tenant-acme --create-namespace -f values.yaml
 ```
 
-The [install guide](https://matelot-cloud.github.io/website/docs/latest/install.html) covers requirements, the values
-that matter (tenant, ingress and TLS, database, backups), the first administrator, upgrades and removal. Images
+The [install guide](https://matelot-cloud.github.io/website/docs/latest/install.html) compares the two, and covers
+requirements, settings, the first administrator, backups, upgrades and removal. Images
 (`ghcr.io/matelot-cloud/{api,web,worker,runner}`) and the chart are published on GitHub Packages, signed with cosign
 (keyless, GitHub OIDC) and carry SBOM attestations; every [release](https://github.com/matelot-cloud/matelot/releases)
 lists the digests.
 
 ## This repository
 
-Matelot is closed source; this repository holds no code. It is the public home for:
+Matelot is closed source; this repository holds no application code. It is the public home for:
 
 - **[Issues](https://github.com/matelot-cloud/matelot/issues)** — bug reports and feature requests (templates provided). Security vulnerabilities go through the [security policy](SECURITY.md), never through a public issue.
 - **[Discussions](https://github.com/matelot-cloud/matelot/discussions)** — questions, installation help, ideas.
 - **[Releases](https://github.com/matelot-cloud/matelot/releases)** — release notes with image and chart digests and SBOMs.
+- **[docker/](docker/)** — the Docker Compose stack (kept in sync by the release pipeline).
 - [CHANGELOG.md](CHANGELOG.md), [SUPPORT.md](SUPPORT.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [LICENSE](LICENSE) (customer EULA).
 
 Pull requests are not accepted here (there is nothing to change); see the [pull request template](.github/PULL_REQUEST_TEMPLATE.md).
