@@ -2,7 +2,7 @@
 
 | I want to… | Go to |
 | --- | --- |
-| install or upgrade a cell | the [install guide](https://matelot-cloud.github.io/website/docs/latest/install.html) and the [documentation](https://matelot-cloud.github.io/website/docs/latest/) |
+| install or upgrade a cell | the [install guide](https://matelot.cloud/docs/latest/install.html) and the [documentation](https://matelot.cloud/docs/latest/) |
 | ask a question or get installation help | [GitHub Discussions](https://github.com/matelot-cloud/matelot/discussions) (Free tier and everyone else; answered by the maintainers and the community) |
 | report a bug | a [bug report issue](https://github.com/matelot-cloud/matelot/issues/new?template=bug_report.yml) with the cell version, the CLI version and the steps |
 | propose a feature | a [feature request issue](https://github.com/matelot-cloud/matelot/issues/new?template=feature_request.yml) |
@@ -11,7 +11,7 @@
 
 ## Support included with a subscription
 
-Indicative until the first commercial release (the tiers are described on the [website](https://matelot-cloud.github.io/website/#pricing)):
+Indicative until the first commercial release (the tiers are described on the [website](https://matelot.cloud/#pricing)):
 
 | Tier | Channel | Target |
 | --- | --- | --- |

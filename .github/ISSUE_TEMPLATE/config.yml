@@ -7,7 +7,7 @@ contact_links:
     url: https://github.com/matelot-cloud/matelot/security/advisories/new
     about: Report privately through GitHub security advisories (or security@matelot.io). Never as a public issue.
   - name: Documentation and install guide
-    url: https://matelot-cloud.github.io/website/docs/latest/
+    url: https://matelot.cloud/docs/latest/
     about: Check the docs first — the install guide covers requirements, values, backups and upgrades.
   - name: Commercial questions
     url: mailto:sales@matelot.io

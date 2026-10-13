@@ -5,9 +5,9 @@
 <p align="center"><strong>Product security, DevSecOps and CRA compliance — self-hosted in your Kubernetes cluster.</strong></p>
 
 <p align="center">
-  <a href="https://matelot-cloud.github.io/website/">Website</a> ·
-  <a href="https://matelot-cloud.github.io/website/docs/latest/">Documentation</a> ·
-  <a href="https://matelot-cloud.github.io/website/docs/latest/install.html">Install guide</a> ·
+  <a href="https://matelot.cloud/">Website</a> ·
+  <a href="https://matelot.cloud/docs/latest/">Documentation</a> ·
+  <a href="https://matelot.cloud/docs/latest/install.html">Install guide</a> ·
   <a href="https://github.com/matelot-cloud/helm-charts">Helm chart</a> ·
   <a href="https://github.com/matelot-cloud/matelot/releases">Releases</a> ·
   <a href="SECURITY.md">Security policy</a>
@@ -46,7 +46,7 @@ _Screenshots will be added with the first public release._
 **Docker Compose — five minutes on one host** (evaluation and small teams):
 
 ```bash
-git clone https://github.com/matelot-cloud/matelot.git && cd matelot/docker
+git clone --depth 1 https://github.com/matelot-cloud/matelot && cd matelot/docker
 cp .env.example .env            # MATELOT_DOMAIN (keep localhost to try it), MATELOT_ADMIN_EMAIL
 docker compose up -d
 docker compose logs -f welcome  # prints the URL and the administrator login
@@ -63,7 +63,7 @@ helm install acme oci://ghcr.io/matelot-cloud/charts/secops-cell --version <rele
   --namespace tenant-acme --create-namespace -f values.yaml
 ```
 
-The [install guide](https://matelot-cloud.github.io/website/docs/latest/install.html) compares the two, and covers
+The [install guide](https://matelot.cloud/docs/latest/install.html) compares the two, and covers
 requirements, settings, the first administrator, backups, upgrades and removal. Images
 (`ghcr.io/matelot-cloud/{api,web,worker,runner}`) and the chart are published on GitHub Packages, signed with cosign
 (keyless, GitHub OIDC) and carry SBOM attestations; every [release](https://github.com/matelot-cloud/matelot/releases)
