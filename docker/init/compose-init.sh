@@ -56,7 +56,9 @@ if [ "$MODE" = realm-update ]; then
   # Keycloak imports realm.json once (IGNORE_EXISTING); after a domain or scheme change the realm in the database is
   # brought in line by the shared script (redirect URIs, sslRequired, …; users untouched)
   KC_BOOTSTRAP_ADMIN_USERNAME="$(cat "$M/secrets/keycloak/KC_BOOTSTRAP_ADMIN_USERNAME")"; KC_BOOTSTRAP_ADMIN_PASSWORD="$(cat "$M/secrets/keycloak/KC_BOOTSTRAP_ADMIN_PASSWORD")"
-  export KC_BOOTSTRAP_ADMIN_USERNAME KC_BOOTSTRAP_ADMIN_PASSWORD
+  # the administrator exists from the realm import; a MATELOT_ADMIN_EMAIL changed later is seeded (temporary password)
+  SEED_USERS="$ADMIN_EMAIL"; SEED_PASSWORD="$(cat "$M/secrets/keycloak/SEED_ADMIN_PASSWORD")"
+  export KC_BOOTSTRAP_ADMIN_USERNAME KC_BOOTSTRAP_ADMIN_PASSWORD SEED_USERS SEED_PASSWORD
   exec node "$(dirname "$0")/realm-sync.js" "${KEYCLOAK_URL:-http://keycloak:8080/auth}" "$M/keycloak/import/realm.json"
 fi
 command -v openssl > /dev/null || { echo "openssl is required in the init image" >&2; exit 1; }
