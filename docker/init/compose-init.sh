@@ -159,7 +159,7 @@ cat > "$M/keycloak/import/realm.json" <<REALM
     }
   ],
   "users": [
-    { "username": "admin", "email": "$(json_str "$ADMIN_EMAIL")", "emailVerified": true, "enabled": true, "firstName": "Cell", "lastName": "Admin",
+    { "username": "admin", "email": "$(json_str "$ADMIN_EMAIL")", "emailVerified": true, "enabled": true,
       "credentials": [{ "type": "password", "value": "$(json_str "$SEED_PASSWORD")", "temporary": false }] }
   ]
 }
@@ -217,6 +217,7 @@ kv "$E" BOOTSTRAP_ADMIN_EMAILS "$ADMIN_EMAIL"
 kv "$E" CORS_ORIGINS "$BASE_URL"
 kv "$E" WEB_BASE_URL "$BASE_URL"
 kv "$E" API_PUBLIC_URL "$BASE_URL"        # what the OAuth metadata, registry realm and runner commands advertise (Caddy routes /api here)
+kv "$E" KEYCLOAK_ADMIN_URL http://keycloak:8080/auth   # user administration and invite links through Keycloak's admin API (bootstrap admin from secrets/keycloak)
 kv "$E" REGISTRY_INTERNAL_URL http://registry:5000   # how the api reaches the built-in registry (the public REGISTRY_HOST is Caddy; localhost:5000 inside the api container is the api)
 kv "$E" GITHUB_APP_ID ""
 kv "$E" GITHUB_APP_SLUG ""
