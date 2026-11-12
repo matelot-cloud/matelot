@@ -24,5 +24,8 @@ The first release a customer can install from the public chart: `oci://ghcr.io/m
 - **Notifications** to Slack, Microsoft Teams, e-mail and webhooks.
 - **Identity and access**: Keycloak per cell (SSO/SAML/MFA), hierarchical RBAC, administration area, usage and
   rate limits.
-- **CLI** `matelot` (npm `secops-platform-cli`) with every UI action; **MCP server** for AI assistants.
+- **Observability**: Prometheus metrics for every component, one OpenTelemetry trace per pipeline, structured logs,
+  Grafana dashboards and alert rules with runbooks; audit and security events with a documented schema for your SIEM.
+- **CLI** `matelot` (npm package `matelot-cli`, GitHub Action `matelot-cloud/setup-cli`) with every UI action;
+  **MCP server** for AI assistants.
 - **Operations**: scheduled backups to a volume and S3, restore and disaster-recovery procedures, usage per month.
